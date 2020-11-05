@@ -47,8 +47,6 @@ export default {
             if (to.path != from.path) {
                 this.getImages();
             }
-            console.log(to);
-            console.log(from);
         },
     },
 };

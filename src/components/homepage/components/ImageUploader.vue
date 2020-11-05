@@ -69,9 +69,13 @@ export default {
             Array.from(files).forEach(file => this.addImage(file));
         },
         addImage(file) {
-            // console.log("FILES: ", this.files.size);
+            // console.log("FILES: ", file);
             if (!file.type.match('image.*')) {
                 this.$toastr.e(`${file.name} is not an image`);
+                return;
+            }
+            if(file.size > 35000000) {
+                this.$toastr.e(`This ${file.name} size is greater than 35MB`);
                 return;
             }
             this.files.push(file);
