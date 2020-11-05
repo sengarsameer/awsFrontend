@@ -77,7 +77,7 @@ export default {
                     return false;
                 }
             })
-            if(response[0] == false) {
+            if(response[0] == (false || undefined)) {
                 return
             }
             awsServices.createBucket(this.bucketName).then((res) => {
