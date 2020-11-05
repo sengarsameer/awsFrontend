@@ -3,7 +3,8 @@ import VueAxios from 'vue-axios';
 import axios from 'axios';
 
 var vueax = axios.create({
-  baseURL: 'http://localhost:3000/',
+  baseURL: '/api',
+  //baseURL: 'http://localhost:3000/',
   headers: {
     'Content-Type': 'application/json'
   }
