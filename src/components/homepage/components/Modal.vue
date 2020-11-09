@@ -77,9 +77,10 @@ export default {
                     return false;
                 }
             })
-            if(response[0] == (false || undefined)) {
-                return
-            }
+            // if(response[0] == (false)) {
+            //     return
+            // }
+            // console.log("RES: ", response[0]);
             awsServices.createBucket(this.bucketName).then((res) => {
                 this.$emit("bucket", this.bucketName);
                 if (res.Location) {
